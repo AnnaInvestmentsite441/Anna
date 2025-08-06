@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Index - iPortfolio Bootstrap Template</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+    <!-- EmailJS SDK v4 -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      // Initialize with your EmailJS public key
+      emailjs.init({ publicKey: "cuE600tKFD1vFpUXh" });
+
+      window.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Set the current date/time
+            document.getElementById("message-time").value =
+              new Date().toLocaleString();
+
+            emailjs.sendForm("service_kh3b4fn", "template_ib9vk06", this).then(
+              () => {
+                alert("✅ Message sent successfully!");
+                this.reset();
+              },
+              (error) => {
+                console.error("❌ Failed to send:", error);
+                alert("❌ Failed to send message. Please try again.");
+              }
+            );
+          });
+      });
+    </script>
+  </head>
+
+  <body class="index-page">
+    <header id="header" class="header dark-background d-flex flex-column">
+      <i class="header-toggle d-xl-none bi bi-list"></i>
+
+      <div class="profile-img">
+        <img
+          src="assets/img/Image-5.jpg"
+          alt=""
+          class="img-fluid rounded-circle"
+        />
+      </div>
+
+      <a
+        href="index.html"
+        class="logo d-flex align-items-center justify-content-center"
+      >
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">ANNA LEGRANDE</h1>
+      </a>
+
+      <div class="social-links text-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li>
+            <a href="#hero" class="active"
+              ><i class="bi bi-house navicon"></i>Home</a
+            >
+          </li>
+          <li>
+            <a href="#services"
+              ><i class="bi bi-hdd-stack navicon"></i> Services</a
+            >
+          </li>
+          <li>
+            <a href="#about"><i class="bi bi-person navicon"></i> About</a>
+          </li>
+          <li>
+            <a href="#resume"
+              ><i class="bi bi-file-earmark-text navicon"></i> Resume</a
+            >
+          </li>
+
+          <li>
+            <a href="#contact"
+              ><i class="bi bi-envelope navicon"></i> Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <!-- Hero Section -->
+      <section id="hero" class="hero section dark-background">
+        <img
+          src="assets/img/Image-1-1.jpg"
+          alt=""
+          data-aos="fade-in"
+          class=""
+        />
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <h2>ANNA GRAVELY LEGRANDE</h2>
+          <p>
+            I'm a
+            <span
+              class="typed"
+              data-typed-items="Financial Consultant,Investment Advisor,Wealth Strategist"
+              >Professional Financial Consultant</span
+            ><span
+              class="typed-cursor typed-cursor--blink"
+              aria-hidden="true"
+            ></span
+            ><span
+              class="typed-cursor typed-cursor--blink"
+              aria-hidden="true"
+            ></span>
+          </p>
+        </div>
+      </section>
+      <!-- /Hero Section -->
+
+      <!-- Services Section -->
+      <section id="services" class="services section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>My Quality Services</h2>
+          <p>
+            Trusted Financial Consultant providing Bespoke Investment Solutions
+            with Insight and Integrity. I Align Every Strategy with Your Vision,
+            Transforming Financial Planning into a Pathway to Lasting Success.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row gy-6">
+            <div
+              class="col-lg-6 col-md-12 service-item d-flex"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="icon flex-shrink-0">
+                <i class="bi bi-briefcase"></i>
+              </div>
+              <div>
+                <h4 class="title">
+                  <a href="service-details.html" class="stretched-link"
+                    >Wealth Management</a
+                  >
+                </h4>
+                <p class="description">
+                  Tailored strategies to grow and preserve your wealth, ensuring
+                  long-term financial security and peace of mind. I take a
+                  holistic approach to managing your assets—balancing risk,
+                  performance, and liquidity—so your financial plan adapts with
+                  you as life evolves. Whether you're building wealth or
+                  protecting it, my focus is always on achieving your personal
+                  and financial milestones.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-6 col-md-12 service-item d-flex"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="icon flex-shrink-0">
+                <i class="bi bi-calendar4-week"></i>
+              </div>
+              <div>
+                <h4 class="title">
+                  <a href="service-details.html" class="stretched-link"
+                    >Retirement Planning</a
+                  >
+                </h4>
+                <p class="description">
+                  Comprehensive, goal-driven plans designed to help you retire
+                  comfortably, confidently, and on your own terms. I work
+                  closely with you to forecast income needs, estimate future
+                  expenses, and select the right mix of investment vehicles.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-6 col-md-12 service-item d-flex"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="icon flex-shrink-0">
+                <i class="bi bi-bar-chart"></i>
+              </div>
+              <div>
+                <h4 class="title">
+                  <a href="service-details.html" class="stretched-link"
+                    >Investment Advisory</a
+                  >
+                </h4>
+                <p class="description">
+                  Expert insights and personalized guidance to build, diversify,
+                  and optimize a portfolio aligned with your financial vision.
+                  Using data-driven analysis and a disciplined investment
+                  approach, I help you navigate both traditional and emerging
+                  markets. From stocks and bonds to crypto and alternative
+                  assets, every recommendation is tailored to your unique
+                  objectives and risk tolerance.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-6 col-md-12 service-item d-flex"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="icon flex-shrink-0">
+                <i class="bi bi-card-checklist"></i>
+              </div>
+              <div>
+                <h4 class="title">
+                  <a href="service-details.html" class="stretched-link"
+                    >Tax Planning</a
+                  >
+                </h4>
+                <p class="description">
+                  One key to investment success is developing a tax-efficient
+                  strategy—one that minimizes what you owe and maximizes what
+                  you keep. I help you structure investments, income, and
+                  withdrawals in a way that reduces tax impact while staying
+                  compliant. With smart planning, we can improve your net
+                  returns and preserve more of your hard-earned capital across
+                  every financial decision.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+          </div>
+        </div>
+      </section>
+      <!-- /Services Section -->
+
+      <!-- About Section -->
+      <section id="about" class="about section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>About Me</h2>
+          <p>
+            With a strategic mindset and proven financial acumen, I help clients
+            grow wealth, manage risk, and seize high-return opportunities across
+            both traditional and emerging markets.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4 justify-content-between">
+            <div class="col-lg-4">
+              <img src="assets/img/Image-5.jpg" class="img-fluid" alt="" />
+            </div>
+            <div class="col-lg-8 content">
+              <h2>Over 27 Years of Proven Experience</h2>
+              <p class="fst-italic py-3">
+                I specialize in providing clear, actionable advice on
+                securities, portfolio building, and strategic investments. From
+                developing high-yield trading frameworks to implementing
+                customized financial strategies, my focus is on delivering
+                consistent, long-term results that grow your wealth and minimize
+                risk.
+              </p>
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong
+                        >Simplified Investment & Trading Experience</strong
+                      >
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong
+                        >Real-Time Market Insights & Performance
+                        Tracking</strong
+                      >
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong
+                        >Dedicated Support Across Crypto, Stocks, & Traditional
+                        Assets</strong
+                      >
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong
+                        >Risk Management Tailored to Your Financial
+                        Goals</strong
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="py-3 col-lg-8">
+                <a class="button" href="#contact"> Contact Me</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /About Section -->
+
+      <!-- Stats Section -->
+      <section id="stats" class="stats section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4">
+            <div class="col-lg-3 col-md-6">
+              <div class="stats-item">
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="27"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
+                <p>
+                  <strong>Years of Experience</strong>
+                </p>
+              </div>
+            </div>
+            <!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-6">
+              <div class="stats-item">
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="1521"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
+                <p>
+                  <strong>Happy Clients</strong>
+                </p>
+              </div>
+            </div>
+            <!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-6">
+              <div class="stats-item">
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="1453"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
+                <p>
+                  <strong>Assets Under Management</strong>
+                </p>
+              </div>
+            </div>
+            <!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-6">
+              <div class="stats-item">
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="32"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
+                <p>
+                  <strong>Portfolios Handled</strong>
+                </p>
+              </div>
+            </div>
+            <!-- End Stats Item -->
+          </div>
+        </div>
+      </section>
+      <!-- /Stats Section -->
+
+      <!-- Resume Section -->
+      <section id="resume" class="resume section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <img src="assets/img/Image-4.jpg" class="img-fluid" alt="" />
+            </div>
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="container section-title" data-aos="fade-up">
+                <h2>My Education</h2>
+              </div>
+              <div class="resume-item">
+                <h4>Exam</h4>
+                <h5>
+                  Securities Industry Essentials Examination | SIE | 10/01/2018
+                </h5>
+                <p><em>General Industry/Product Exams</em></p>
+              </div>
+              <!-- Edn Resume Item -->
+
+              <div class="resume-item">
+                <h4>Exam</h4>
+                <h5>
+                  Direct Participation programs Representative Exammination |
+                  Series 22 | 07/08/1988 |
+                </h5>
+                <p><em>General Industry/Product Exams</em></p>
+              </div>
+              <!-- Edn Resume Item -->
+              <div class="resume-item">
+                <h4>Exam</h4>
+                <h5>
+                  Uniform Securities Agent State Law Examination | Series 63 |
+                  05/10/1988
+                </h5>
+                <p><em>State Securities Law Exams</em></p>
+              </div>
+
+              <div class="resume-item">
+                <h4>Exam</h4>
+                <h5>
+                  Uniform Securities Agent State Law Examination | Series 63 |
+                  05/10/1988 |
+                </h5>
+                <p><em>State Securities Law Exams </em></p>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="container section-title" data-aos="fade-up">
+                <h2>My Professional Experience</h2>
+              </div>
+              <div class="resume-item">
+                <h4>2015 - Present (9 Years)</h4>
+                <h5>Investment Advisor</h5>
+                <p><em>AVANTAX INVESTMENT SERVICES, INC. (CRD# 13686) </em></p>
+              </div>
+              <!-- Edn Resume Item -->
+
+              <div class="resume-item">
+                <h4>1997 - 2016 (17 Years)</h4>
+                <h5>CMS course</h5>
+                <p><em>KMS FINANCIAL SERVICES, INC. (CRD# 3866) </em></p>
+              </div>
+
+              <div class="resume-item">
+                <h4>I have passed:</h4>
+                <h5>3 General Industry/Product Exams</h5>
+                <p><em>1 State Securities Law Exam </em></p>
+              </div>
+
+              <div class="resume-item">
+                <h4>I am registered with:</h4>
+                <h5>7 U.S. states and territories</h5>
+                <p><em>1 Self-Regulatory Organization. </em></p>
+              </div>
+              <!-- Edn Resume Item -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Resume Section -->
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="testimonials section light-background">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>My Client's Stories</h2>
+          <p>
+            Empowering individuals and businesses to achieve financial clarity,
+            stability, and growth through tailored strategies and expert
+            guidance.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 600,
+                "autoplay": {
+                  "delay": 5000
+                },
+                "slidesPerView": "auto",
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "type": "bullets",
+                  "clickable": true
+                },
+                "breakpoints": {
+                  "320": {
+                    "slidesPerView": 1,
+                    "spaceBetween": 40
+                  },
+                  "1200": {
+                    "slidesPerView": 3,
+                    "spaceBetween": 1
+                  }
+                }
+              }
+            </script>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span
+                      >I came in skeptical and left confident. Anna Gravely
+                      Legrande not only grew my portfolio but taught me how to
+                      make smarter financial decisions. His patience and clarity
+                      make even the most complex strategies easy to
+                      understand.</span
+                    >
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                  <h3>Daniel M.</h3>
+                  <h4>Software Engineer</h4>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span
+                      >Working with Anna Gravely Legrande has been a game
+                      changer for my finances. For the first time, I feel in
+                      control of my investments and have a clear plan for the
+                      future. His advice is sharp, practical, and always
+                      tailored to my situation.</span
+                    >
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                  <h3>Sarah Wilsson</h3>
+                  <h4>Small Business Owner</h4>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span
+                      >As someone new to investing, I was overwhelmed. [Your
+                      Name] broke everything down step-by-step and made sure I
+                      was comfortable every step of the way. I now have a
+                      diversified portfolio and confidence in my future.</span
+                    >
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                  <h3>Ahmed Karlis</h3>
+                  <h4>Entrepreneur</h4>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span
+                      >I was referred by a colleague, and I’m so glad I made the
+                      move. From retirement planning to tax efficiency,
+                      everything has improved. This is real, measurable
+                      progress.</span
+                    >
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                  <h3>Matt Brandon</h3>
+                  <h4>Senior Executive</h4>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span
+                      >The 24/7 support and market updates make all the
+                      difference. I never feel in the dark, and I know my money
+                      is working even when I’m not. Trust, performance, and
+                      peace of mind—hard to beat.</span
+                    >
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                  <h3>Greg Larson</h3>
+                  <h4>Real Estate Developer</h4>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- /Testimonials Section -->
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Start the Conversation</h2>
+          <p>
+            Your journey to smarter investing and lasting financial freedom
+            begins here. Reach out today—your future is worth planning for.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4">
+            <div class="col-lg-5">
+              <div class="info-wrap">
+                <div
+                  class="info-item d-flex"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <i class="bi bi-geo-alt flex-shrink-0"></i>
+                  <div>
+                    <h3>Address</h3>
+                    <p>A108 Adam Street, New York, NY 535022</p>
+                  </div>
+                </div>
+                <!-- End Info Item -->
+
+                <div
+                  class="info-item d-flex"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
+                  <i class="bi bi-telephone flex-shrink-0"></i>
+                  <div>
+                    <h3>Call Us</h3>
+                    <p>+1 729 542 981</p>
+                  </div>
+                </div>
+                <!-- End Info Item -->
+
+                <div
+                  class="info-item d-flex"
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                >
+                  <i class="bi bi-envelope flex-shrink-0"></i>
+                  <div>
+                    <h3>Email Us</h3>
+                    <p>info@annalegrande.com</p>
+                  </div>
+                </div>
+                <!-- End Info Item -->
+
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus"
+                  frameborder="0"
+                  style="border: 0; width: 100%; height: 270px"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+
+            <div class="col-lg-7">
+              <form
+                class="php-email-form"
+                id="contact-form"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <div class="row gy-4">
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      type="text"
+                      name="name"
+                      required
+                      placeholder="Your Name"
+                      class="form-control"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      placeholder="Your Email"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-md-12">
+                    <input
+                      type="text"
+                      name="title"
+                      placeholder="Subject of the message"
+                      required
+                      class="form-control"
+                    />
+                  </div>
+                  <input type="hidden" name="time" id="message-time" />
+                  <div class="col-md-12">
+                    <textarea
+                      class="form-control"
+                      name="message"
+                      placeholder="Message"
+                      rows="10"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="col-md-12 text-center">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">
+                      Your message has been sent. Thank you!
+                    </div>
+
+                    <button type="submit">Send Message</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- End Contact Form -->
+          </div>
+        </div>
+      </section>
+      <!-- /Contact Section -->
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+      <div class="container">
+        <div class="copyright text-center">
+          <p>
+            © <span>Copyright</span>
+            <strong class="px-1 sitename">ANNA GRAVELY LEGRANDE</strong>
+            <span>All Rights Reserved</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
